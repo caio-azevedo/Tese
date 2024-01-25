@@ -69,15 +69,24 @@ L<-rep(720,n)
 
 R<-10*n
 
-# Valores iniciais para o algoritmo
+
+# Valores iniciais para o algoritmo ---------------------------------------
+
+
 init <- c(100,0.1)
 
-# Lazer
+
+# Lazer -------------------------------------------------------------------
+
+
 Lz<-function(B,t,w,L,a){
   ifelse(w>=2.525,((1-a)*(B+(1-t)*w*L)/((1-t)*w)),720)
 }
 
-# Consumo
+
+# Consumo -----------------------------------------------------------------
+
+
 C<-function(B,t,w,L,a){
   ifelse(w>=2.525,a*(B + (1-t)*w*L),B)
 }
